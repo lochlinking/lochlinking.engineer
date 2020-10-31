@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Universal Styles */
+
+html {
+    font-size: 16px;
+    font-family: "Merriweather Sans", "sans-serif";
+    font-weight: 400;
+    color: #bcd8c1;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+body {
+    background-color: #e3e5e9;
+}
+
+/* Header Styles */
+
+header {
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height:8rem;
+    width: 100%;
+    background-color: #222E50;
+    align-items: center;
+    
+}
+
+header h1 {
+    z-index: 1;
+    display: flex;
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 3rem;
+}
+
+nav {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+nav a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+    color: #bcd8c1
+}
