@@ -9,21 +9,31 @@
 </head>
 <body>
 <header>
-    <h1>Lochlin King.</h1>
+    <a href="index.html"><h1>Lochlin King.</h1>
     <h3> Mechanical Engineer, EIT | Open to work</h3>
-    <nav>
-            <span><a href="about.html">About</a><i class="fa fa-angle-down"></i></span>
-            <span><a href="contact.html">Contact</a><i class="fa fa-angle-down"></i></span>
-            <span><a href="resources.html">Resources</a><i class="fa fa-angle-down"></i></span>
-            <span><a href="portfolio.html">Portfolio</a><i class="fa fa-angle-down"></i></span>
-            <span><a href="resume.html">Resume</a><i class="fa fa-angle-down"></i></span>
+    </a>
+    <nav id="desktop-nav">
+            <span><a href="about.html">About<i class="fa fa-angle-down"></i></a></span>
+            <span><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></span>
+            <span><a href="resources.html">Resources</a><i class="fa fa-angle-down"></i></a></span>
+            <span><a href="portfolio.html">Portfolio</a><i class="fa fa-angle-down"></i></a></span>
+            <span><a href="resume.html">Resume</a><i class="fa fa-angle-down"></i></a></span>
             
     </nav>
 
-    <nav class="mobile">
-        <i class="fa fa-bars"></i>
+    <nav class="mobile-nav">
+        <input type="checkbox" id="expand-menu" /> 
+        <div class="menu"> 
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+        <label for="expand-menu" id="expand-button"><i class="fa fa-bars"></i></label>
     </nav>
-
 </header>
 <main>
     <!-- Change this to a video at a later date-->
@@ -33,7 +43,7 @@
 
 <div class="welcome">
     <h2>Welcome!</h2>
-    <p>Here I will write a paragraph about stuff!</p>
+    <p>Hello! My name is Lochlin King and I am a Canadian mechanical engineer. I spent the month of October 2020 learning HTML and CSS in order to build myself a website to showcase my projects, work experience, and provide future employers with an opportunity to see what I am capable of.</p>
 </div>
 </main>
 </body>
