@@ -9,6 +9,7 @@ html {
     color: #bcd8c1;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 p {
@@ -19,6 +20,8 @@ body {
     background-color: #e3e5e9;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%
 }
 
 a {
@@ -29,14 +32,17 @@ a {
 header {
     position: fixed;
     z-index: 1;
-    height:7.5rem;
+    height:6rem;
     width: 100%;
     background-color: #222E50;
     border-bottom: solid 0.375rem #000000;
 }
 
 header h1 {
-    padding-left: 2rem;
+    margin:0;
+    position: relative;
+    top: 1rem;
+    padding-left: 1rem;
     font-size: 3rem;
     color: #bcd8c1;
 }
@@ -45,8 +51,8 @@ header h3 {
     font-size: 0.75rem;
     margin: 0;
     position: absolute;
-    left: 2rem;
-    top: 6rem;
+    left: 1rem;
+    top: 4.5rem;
     color: #bcd8c1;
 }
 
@@ -75,14 +81,13 @@ span:hover a {
 
 /* Main page video display */
 .jumbotron {
-    /* z-index: 2; */
-    height: 28.125rem;
+    height: 25rem;
     background-image: url("https://live.staticflickr.com/1923/43297903550_6f626febf9_b.jpg");
     background-size: cover;
     background-position: center;
     border-bottom: solid 0.375rem #000000;
     position: relative;
-    top: 7.875rem;
+    top: 6.375rem;
 }
 
 /* Container for main page content */
@@ -156,21 +161,45 @@ visibility: hidden;
     width: auto;
     background-color: #ffffff;
     border-radius: 2rem;
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 2rem;
     color: #000000;
     align-items: center;
-    justify-content: center;
-}
-
-.welcome p {
-    position: relative;
-    top: 10%;
+    justify-content: space-around;
 } 
 
+.welcome {
+    background-image: url("media/images/Instruments.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* .welcome h2 {
     padding-top: 2rem;
+} 
+.welcome p {
+    position: absolute;
+    top: 1%;
+} */
+
+
+ /* Footer */
+
+ footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 3.25rem;
+    width: 100%;
+    background-color: #222E50;
+    margin-top: 2rem;
 }
 
+footer i {
+    color: #bcd8c1;
+    margin: 0 1rem 0 1rem;
+}
 /* Media Queries */
 
 @media only screen and (max-width: 400px) {
@@ -182,28 +211,19 @@ visibility: hidden;
     header h1 {
         font-size: 2rem;
         margin: 0;
-        padding: 1rem 0 0 1rem;
+        
     }
     header h3 {
-        position: absolute;
-        top: 4rem;
-        left: 0rem;
         font-size: 0.6rem;
-        margin: 0; 
-        padding: 0 0 0 1rem;
+        top: 3.75rem;
     }
     .jumbotron {
         width: 100%;
      }
 }
 
-    /* .mobile {
-        top: 0;
-        margin-top: 2.25rem;
-        margin-right: 0.5rem;
-    } */
-
 @media only screen and (max-width: 920px) {
+
     .mobile-nav{
         padding: 0;
         margin: 0;
@@ -225,4 +245,10 @@ visibility: hidden;
     #expand-button {
         visibility: visible;
     }
+}
+
+.label {
+    position: absolute;
+    top: 8rem;
+    left: 10%;
 }
