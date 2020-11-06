@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 /* Universal Styles */
 
 html {
     font-size: 16px;
-    font-family: "Merriweather Sans", "sans-serif";
+    /* font-family: "Roboto", "sans-serif"; */
+    /* font-family: "Dosis", "sans-serif"; */
+    font-family: "IBM Plex Sans", "sans-serif";
     font-weight: 400;
-    color: #bcd8c1;
+    color: #c0d6df;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -17,7 +20,7 @@ p {
 }
 
 body {
-    background-color: #e3e5e9;
+    background-color: #dbe9ee;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -27,46 +30,54 @@ body {
 a {
     text-decoration: none;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
 /* Header Styles */
 
 header {
+    display: flex;
     position: fixed;
     z-index: 1;
-    height:6rem;
+    height: 12%;
     width: 100%;
-    background-color: #222E50;
-    border-bottom: solid 0.375rem #000000;
+    background-color: #4f6d7a;
+    justify-content: space-between;
 }
 
 header h1 {
-    margin:0;
-    position: relative;
-    top: 1rem;
-    padding-left: 1rem;
+    margin: 1% auto;
+    padding: 1% auto;
+    width: auto;
     font-size: 3rem;
-    color: #bcd8c1;
+    color: #c0d6df;
+    font-weight: 400;
 }
 
 header h3 {
     font-size: 0.75rem;
     margin: 0;
-    position: absolute;
-    left: 1rem;
-    top: 4.5rem;
-    color: #bcd8c1;
+    padding-left: 1%;
+    color: #c0d6df;
 }
 
 /* Desktop navigation */
 
 nav {
-    position: absolute;
-    right: 0.5rem;
-    bottom: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
+
 nav a {
     font-size: 1.25rem;
     text-decoration: none;
-    color: #bcd8c1;
+    color: #c0d6df;
     padding-right: 0.25rem;
 }
 
@@ -83,28 +94,28 @@ main {
     display: flex;
     margin: 0;
     padding: 0;
-    text-align: center;
     position: relative;
-    top: 6.375rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    top: 12%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    flex-flow: column wrap;
 }
 
 /* Main page video display */
 .jumbotron {
-    height: 20rem;
+    height: 40%;
     background-image: url("media/images/Instruments.jpg");
     background-size: cover;
     background-position: center;
-    border-bottom: solid 0.375rem #000000;
     position: relative;
-    top: 6.375rem ;
+    top: 12%;
     }
 
 /* Mobile navigation */
 
 .mobile-nav {
-    visibility: hidden;
+    display: none;
 }
 
 #expand-button {
@@ -121,13 +132,13 @@ visibility: hidden;
 .menu {
     display: flex;
     position: fixed;
-    top: 6.375rem;
+    top: 15%;
     right: 0rem;
     padding: 0;
     margin: 0;
     height: 9rem;
     width: 7.5rem;
-    background-color: #222E50; 
+    background-color: #4f6d7a; 
     align-items: center;
     justify-content: space-around; 
 }
@@ -140,7 +151,7 @@ visibility: hidden;
 
 #expand-button {
     padding: 0.1rem 0.29649rem 0.1rem 0.29649rem ;
-    border: solid 0.125rem #bcd8c1;
+    border: solid 0.125rem #c0d6df;
     border-radius: 0.3rem;
 
 }
@@ -152,29 +163,19 @@ visibility: hidden;
     border: solid 0.125rem #ffffff;
 }
 
-/* Card for welcome information */
+/* Container for media */
 
-.welcome {
-    display: flex;
+/* .media-container {
     position: relative;
-    height: 18.75rem;
-    width: 80%;
-    background-color: #ffffff;
+    display: flex;
+    justify-content: left;
+    height: 10%;
+    width: 100%;
+    border: solid 0.375rem #c0d6df;
     border-radius: 2rem;
-    margin: 2rem 2rem 5rem 2rem;
-    color: #000000;
-    align-items: flex-start;
-    justify-content: space-around;
-} 
+    margin: 10%;
 
-/* .welcome h2 {
-    padding-top: 2rem;
-} 
-.welcome p {
-    position: absolute;
-    top: 1%;
 } */
-
 
  /* Footer */
 
@@ -184,14 +185,14 @@ visibility: hidden;
     justify-content: center;
     position: fixed;
     bottom: 0;
-    height: 3.25rem;
+    height: 6%;
     width: 100%;
-    background-color: #222E50;
+    background-color: #4f6d7a;
     margin-top: 2rem;
 }
 
 footer i {
-    color: #bcd8c1;
+    color: #c0d6df;
     margin: 0 1rem 0 1rem;
 }
 /* Media Queries */
@@ -219,17 +220,23 @@ footer i {
 @media only screen and (max-width: 920px) {
 
     .mobile-nav{
-        padding: 0;
+        /* padding: 0;
         margin: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: fixed;
+        height: 25%;
+        width: 100%; */
+
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        top: 3rem;
-        right: 2rem;
-        height: 1.5rem;
-        width: 1.5rem;
-
+        justify-content: flex-end;
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 4% 4%;
+        padding: 0;
     }
 
     #desktop-nav {
@@ -241,46 +248,43 @@ footer i {
     }
 }
 
-.label {
-    position: absolute;
-    top: 1rem;
-    left: 3rem;
-    color: #000000;
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top: 12%;
+    color:#4f6d7a;
+    height: 8%;
+    width: 100%;
+    background-color: #c0d6df;
+}
+.page-title h1 {
+    padding: 2rem;
 }
 
 /* CSS for about.html */
 
-.profile-container {
+.profile-container{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: auto;
+margin-bottom: 4rem;
+flex-flow: column wrap;
+}
+.avatar-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     height: 16rem;
     width: 16rem;
-    top: 6rem;
-    left: 0rem;
-    background-color: #ffffff;
-    border-radius: 2rem;
-    overflow: hidden;
-    margin: 2rem;
-}
-
-#bio {
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    height: 16rem;
-    width: 16rem;
-    top: 6rem;
-    left: 0rem;
     background-color: transparent;
     border-radius: 2rem;
-    overflow: hidden; 
-    margin: 0 2rem 0 2rem;
-}
-
-#bio p {
-    color: #000000;
-    margin: 2rem;
+    overflow: hidden;
+    margin-top: 4%;
+    
+    border: solid 0.375rem #c0d6df;
 }
