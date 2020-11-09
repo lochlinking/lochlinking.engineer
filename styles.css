@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
-/* Universal Styles */
+
+/* Universal style rules */
 
 html {
     font-size: 16px;
@@ -50,7 +51,7 @@ p, li {
     font-size: 1rem;
 }
 
-/* Header Styles */
+/* Header style rules */
 
 header {
     display: flex;
@@ -68,7 +69,7 @@ header a {
     color: #c0d6df;
 }
 
-/* Desktop navigation */
+/* Desktop navigation style rules */
 
 #desktop-nav {
     display: inline-flex;
@@ -106,7 +107,9 @@ header a {
 a:hover {
     color: #ffffff;
 }
-/* Container for main page content */
+
+/* Main content container style rule*/
+
 main {
     display: flex;
     flex-direction: column;
@@ -118,7 +121,8 @@ main {
     
 }
 
-/* Main page video display */
+/* Main page video display style rule*/
+
 .jumbotron {
     background-image: url("media/images/Instruments.jpg");
     background-position: center;
@@ -128,6 +132,7 @@ main {
     }
 
 /* Page title header */
+
 .page-title {
     display: flex;
     align-items: center;
@@ -141,7 +146,7 @@ main {
     margin-bottom: 2%;
     }
 
-/* Mobile navigation */
+/* Mobile navigation style rules */
 
 #mobile-nav {
 display: none;
@@ -196,13 +201,13 @@ display: none;
     border: solid 0.125rem #ffffff;
 }
 
-/* Container for media */
+/* About page style rules */
 
 .media-container {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: left;
     height: 30%;
     width: 80%;
@@ -215,6 +220,22 @@ display: none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: auto;
+    border: solid 0.2rem #c0d6df;
+    border-radius: 0.5rem;
+    margin: 2% auto;
+    color: #4f6d7a;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/* Contact page style rules */
 .contact-container {
     position: relative;
     display: flex;
@@ -232,14 +253,24 @@ display: none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.contact-container i {
+padding-right: 1%;
+}
+
+.contact-container:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+/* Resume page style rules */
+
 .resume-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    height: 30%;
-    width: auto;
+    max-height: 30%;
+    max-width: 80%;
     border: solid 0.1rem #c0d6df;
     border-radius: 0.25rem;
     margin: 1% auto;
@@ -266,26 +297,6 @@ border-bottom: solid 0.1rem #4f6d7a;
 table {
     text-align: left;
 }
-.contact-container:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-#avatar-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: auto;
-    border: solid 0.2rem #c0d6df;
-    border-radius: 0.5rem;
-    margin: 2% auto;
-    color: #4f6d7a;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
 
 .download-container {
     position: relative;
@@ -310,7 +321,90 @@ table {
     color: #ffffff;
 }
 
- /* Footer */
+/* Portfolio page style rules */
+
+#expand-project {
+    display:none;
+}
+
+#portfolio-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+    height: 30%;
+    width: 80%;
+    border: solid 0.1rem #c0d6df;
+    border-radius: 0.5rem;
+    margin: 2% auto 0 auto;
+    color: #c0d6df;
+    padding: 1.5%;
+    background-color: #4f6d7a;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.portfolio-thumbnail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    border: solid 0.2rem #c0d6df;
+    border-radius: 0.5rem;
+    margin: 0;
+    color: #4f6d7a;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.portfolio-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 2%;
+}
+.portfolio-icon {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 1% 0 auto ;
+}
+
+#portfolio-button:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.portfolio-content {
+    visibility: collapse;
+}
+
+/* .portfolio-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 auto 2% auto;
+    padding: 1.5%;
+    width: 80%;
+    height: auto;
+    background-color: #c0d6df;
+    color: #4f6d7a;
+} */
+
+#expand-project:checked ~ .portfolio-content {
+   visibility: visible;
+}
+#expand-project:checked ~ #portfolio-button {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+    
+ /* Footer style rules*/
 
  footer {
     display: inline-flex;
@@ -332,6 +426,7 @@ footer i {
 footer i:hover{
 color: #ffffff;
 }
+
 /* Media Queries */
 
 @media only screen and (max-width: 400px) {
@@ -352,6 +447,9 @@ color: #ffffff;
     margin: 5% auto;
 }
 
+.media-container {
+    margin-bottom: 15%;
+}
 }
 
 
@@ -377,3 +475,32 @@ color: #ffffff;
     }
 }
 
+@media only screen and (max-width: 1060px) {
+    .resume-container h2 {
+       font-size: 1.5rem;
+    }
+    .resume-container h3 {
+        font-size: 0.6rem;
+    border-bottom: solid 0.1rem #4f6d7a;
+    }
+    .resume-container h4 {
+        margin: 1% 0 0 0;
+        font-size: 0.5rem;
+        }
+    .resume-container table {
+        font-size: 0.5rem;
+    }
+
+    .resume-container li {
+        font-size: 0.6rem;
+    }
+    .resume-container ul {
+        padding-left: 1rem;
+    }
+    .download-container h2 {
+        font-size: 1rem;
+    }
+    .download-container {
+        margin-bottom: 15%;
+    }
+}
