@@ -10,14 +10,14 @@ html {
     /* font-family: "Dosis", "sans-serif"; */
     font-family: "IBM Plex Sans", "sans-serif";
     font-weight: 400;
-    color: #c0d6df;
+    color: #000000;
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 body {
-    background-color: #dbe9ee;
+    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
     margin: 0;
     padding: 0;
     height: 100%;
@@ -25,18 +25,19 @@ body {
 
 a {
     text-decoration: none;
-    color: #4f6d7a;
+    color: #000000;
    
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 400;
     margin: 0;
     padding: 0;
+    color: #000000;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 6rem;
 }
 
 h2 {
@@ -44,11 +45,11 @@ font-size: 2rem;
 }
 
 h3 {
-font-size: 1rem;
+font-size: 2rem;
 }
 
 p, ul, table{
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Header style rules */
@@ -59,9 +60,7 @@ header {
     z-index: 1;
     height: 12%;
     width: 100%;
-    background-color: #4f6d7a;
     justify-content: space-between;
-    padding: 0.5%;
 }
 
 header a {
@@ -70,68 +69,29 @@ header a {
     color: #c0d6df;
 }
 
-/* Desktop navigation style rules */
-
-#desktop-nav {
-    display: inline-flex;
-    align-items: flex-end;
-    text-align: left;
-    position: relative;
-    margin-right: 0.5%;
-}
-
-#desktop-nav ul {
-    display: flex;
-    flex-direction: row;
-    font-size: 1.25rem;
-    text-decoration: none;
-    list-style: none;
-    color: #c0d6df;
-}
-
-#desktop-nav a {
-    display: inline-flex;
-    align-items: flex-end;
-    padding: 0.3rem;
-    border: solid 0.1rem #c0d6df;
-    background-color:#c0d6df;
-    color: #4f6d7a;
-    border-radius: 0.25rem;
-    margin-right: 0.75rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-#desktop-nav a:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
 /* Main content container style rule*/
 
 main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#jumbotron {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    position: relative;
-    top: 10%;
-    padding-bottom: 7%;
-    
-}
-
-/* Main page video display style rule*/
-
-.jumbotron {
-    background-image: url("media/images/Instruments.jpg");
+    height: 100%;
+    background-image: url("media/images/InstrumentsEdited.png");
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 300px;
-    }
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 2.5%;
+}
 
 /* Page title header */
 
@@ -140,24 +100,11 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 12%;
-    color:#4f6d7a;
-    height: 2%;
+    height: auto;
     width: 100%;
-    background-color: #c0d6df;
-    margin-bottom: 2%;
-    padding-top: 1.75%;
     }
 
-/* Mobile navigation style rules */
-
-#mobile-nav {
-display: none;
-}
-
-#expand-button {
-display: none;
-}
+/* Navigation style rules */
 
 #expand-menu {
     visibility: hidden;
@@ -169,16 +116,16 @@ display: none;
 .menu {
     display: flex;
     position: fixed;
-    top: 12%;
-    right: 0rem;
+    top: 0;
+    right: 0;
     padding: 0;
     margin: 0;
-    height: 9rem;
-    width: 7.5rem;
-    background-color: #4f6d7a; 
+    height: 100%;
+    width: 20%;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.8); 
     align-items: center;
     justify-content: space-around; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .menu ul {
@@ -186,359 +133,459 @@ display: none;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 #expand-button {
-    padding: 0.1rem 0.29649rem 0.1rem 0.29649rem ;
-    border: solid 0.125rem #c0d6df;
-    border-radius: 0.3rem;
-    color:#4f6d7a;
-    background-color: #c0d6df;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    color:#000000;
 }
 #expand-menu:checked ~ .menu {
    visibility: visible;
 }
 #expand-menu:checked ~ #expand-button {
     color: #ffffff;
-    border: solid 0.125rem #ffffff;
 }
 
 /* About page style rules */
 
-.media-container {
-    position: relative;
+#about-slide {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    height: 30%;
-    width: 80%;
-    border: solid 0.1rem #c0d6df;
-    border-radius: 0.25rem;
-    margin: 2% auto;
-    color: #4f6d7a;
-    padding: 1%;
-    background-color: #c0d6df;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    padding-bottom: 10%;
+    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
+    flex-wrap: wrap;
 }
 
-.image-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: auto;
-    border: solid 0.2rem #c0d6df;
-    border-radius: 0.5rem;
-    margin: 2% auto;
-    color: #4f6d7a;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-/* Contact page style rules */
-.contact-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: left;
-    height: 30%;
-    width: 35%;
-    border: solid 0.1rem #c0d6df;
-    border-radius: 0.25rem;
-    margin: 1% auto;
-    color: #4f6d7a;
-    padding: 1%;
-    background-color: #c0d6df;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+#about-list {
+    list-style: none;
+    font-size: 1.25rem;
+    margin: 2% 0 0 0;
+    padding: 0;
 }
 
-.contact-container i {
-padding-right: 1%;
-}
-
-.contact-container:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-/* Resume page style rules */
-
-.resume-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    max-height: 30%;
-    max-width: 80%;
-    border: solid 0.1rem #c0d6df;
-    border-radius: 0.25rem;
-    margin: 1% auto;
-    color: #4f6d7a;
-    padding: 5%;
-    background-color: #c0d6df;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-.resume-container h2 {
-    margin-bottom: 4%;
-}
-.resume-container h3 {
-border-bottom: solid 0.1rem #4f6d7a;
-}
-.resume-container h4 {
-    margin: 1% 0 0 0;
-    }
-
-.resume-container ul {
-    list-style: square;
-}
-
-table {
-    text-align: left;
-}
-
-.download-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: left;
-    height: 30%;
-    width: auto;
-    border: solid 0.1rem #c0d6df;
-    border-radius: 0.25rem;
-    margin: 2% auto;
-    color: #4f6d7a;
-    padding: 1%;
-    background-color: #c0d6df;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    
-}
-
-.download-container:hover {
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-/* Portfolio page style rules */
-
-#expand-project {
-    display:none;
-}
-
-#portfolio-button {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: left;
-    height: 30%;
-    width: 80%;
-    border: solid 0.1rem #c0d6df;
-    border-radius: 0.5rem;
-    margin: 2% auto 0 auto;
-    color: #c0d6df;
-    padding: 1.5%;
-    background-color: #4f6d7a;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.portfolio-thumbnail {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: auto;
-    border: solid 0.2rem #c0d6df;
-    border-radius: 0.5rem;
+.content-column {
+    display: block;
+    padding: 50px;
     margin: 0;
-    color: #4f6d7a;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.portfolio-title {
+.img-column {
+    display: flex;
+    margin: auto;
+    padding: 100px;
+    flex-basis: 500px;
+}
+
+.img-column img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    
+} 
+
+#about-content {
+    max-width: 40%;
+}
+.tab button, .tab a{
+    border: none;
+    background-color: inherit;
+    font-size: 1.25rem;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: left;
+    outline: none;
+    color: #000000;
+    opacity: 0.5;
+  }
+
+.tab button:hover {
+    color: #ffffff;
+}
+
+.tab button.active {
+    color: #000000;
+    opacity: 1;
+}
+
+.tabcontentA {
+    display: none;
+    margin: 0;
+}
+
+#careerInterests {
+    display: block;
+}
+
+#button1 {
+    opacity: 1;
+}
+
+.aboutTable td {
+    border-bottom: solid 0.1rem #000000;
+    padding: 8px 0;
+    font-size: 1rem;
+    width: 625px;
+}
+
+#about-slide ul {
+    padding: 0;
+    font-size: 1.25rem;
+} 
+/* Image slide */
+
+.image-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding-bottom: 47.5px;
+}
+
+.image-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.image-slide h2 {
+    max-width: 50%;
+    color: #ffffff;
+}
+
+/* Resume slide style rules */
+ #resume-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10%;
+    background-image: url("media/images/SynchroMeshEdited.png");
+    background-size: cover;
+    flex-wrap: wrap;
+}
+
+.gradient-overlay {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10%;
+    background-size: cover;
+    flex-wrap: wrap;
+    background: radial-gradient( #ffffff, rgba(195,197,217,0.3));
+}
+#resume-intro {
+    max-width: 50%;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#resume-intro p {
+    width: 75%;
+}
+
+#resume-intro ul {
+    padding: 0;
+    margin: 2.5% 0;
+}
+.resumecontent {
+    display: none;
+    text-align: left;
+    position: relative;
+    margin: 0;    
+    height: 50%;
+    width: 100%;
+    color: #000000;
+    z-index: 1;
+    overflow: visible;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+#resumeOverlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(#ffffff, rgba(195,197,217,0.9)); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */   
+    flex-wrap: wrap; 
+}
+
+#education {
+    display: block;
+}
+
+#button3 {
+    opacity: 1;
+}
+
+.tabcontentR {
+    display: none;
+    margin: 0;
+}
+/* Portfolio slide style rules */
+
+#portfolio-slide {
+    display: flex;
+    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 47.5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-left: 47.5px;
+    margin-right: 47.5px;
+}
+
+#portfolio-intro {
+    display: block;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    width: 100%;
+    margin: 0;
+    height: 25%;
+}
+
+#portfolio-intro p {
+    max-width: 40%;
+}
+.portfolio-card {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 0 2%;
-}
-.portfolio-icon {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin: 0 1% 0 auto ;
+    height: 350px;
+    width: 25%;
+    margin: 2.5px;
+    color: #000000;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-#portfolio-button:hover {
-    border-color: #ffffff;
+.portfolio-card h3, .portfolio-card h4 {
+    padding-left: 5px;
+    padding-top: 5px;
     color: #ffffff;
 }
 
+.portfolio-overlay {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+
+}
+
+.portfolio-overlay:hover {
+    background-color: rgba(0,0,0,0.25);
+}
+
 .portfolio-content {
+    display: block;
+    max-width: 50%;
+    padding: 50px auto;
+    margin: auto;
+}
+
+
+.portfolio-content h1 {
+    font-size: 4rem;
+}
+
+.portfolio-content h2 {
+    font-size: 2rem;
+}
+
+.portfolio-content h3 {
+    font-size: 1.5rem;
+    padding-bottom: 25px;
+}
+/* Contact slide style rules */
+
+#contact-slide {
+    display: flex;
+    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 47.5px;
+    height: 100%;
+   
+}
+
+#contact-slide i {
+    padding: 10px;
+    color: #ffffff;
+}
+
+#email {
+    display: none;
+}
+
+#emailIcon{
+    display: block;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 450px) {
+
+    /* Universal Styles */
+
+.menu {
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+#about-slide {
+    padding: 0;
+}
+#about-content {
+    max-width: 100%;
+    padding: 25px;
+}
+
+.img-column {
+    margin: 0;
+    padding: 0;
+
+}
+.img-column img{
+    border-radius: 0;
+
+}
+ .image-slide {
+     padding: 0;
+ }
+
+.image-slide h2{
+    padding: 25px;
+}
+
+.image-slide h2 {
+    font-size: 1.25rem;
+    max-width: 100%;
+}
+
+.image-overlay {
+    padding: 25px;
+}
+
+#resume-slide {
+    background-position: center;
+}
+#resume-intro {
+    max-width: 100%;
+    padding: 25px;
+}
+
+#resume-intro p {
+    width: 100%;
+    margin: 0;
+}
+
+.resumecontent {
+    height: 100%;
+    overflow: scroll;
+    padding: 25px 25px 100px 25px;
+    margin: 0;
+}
+
+.resumecontent ul {
+    padding-left: 20px;
+    margin: 0;
+}
+.exp-block {
+padding-bottom: 25px;
+}
+.exp-block h4 {
+    padding-bottom: 25px;
+}
+
+#exp-bottom {
+    padding-bottom: 50px;
+}
+
+.row {
+flex-direction: column;
+padding: 0;
+margin: 0;
+}
+
+.portfolio-card {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#portfolio-intro {
+    padding: 25px;
+}
+
+#portfolio-intro p {
+    max-width: 100%;
+}
+
+#portfolio-slide {
+    padding: 0;
+    margin: 0;
+}
+
+#contact-slide h2 {
     display: none;
 }
 
 .portfolio-content {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 0 auto 2% auto;
-    padding: 1.5%;
-    width: 80%;
-    height: auto;
-    background-color: #c0d6df;
-    color: #4f6d7a;
+    max-width: 80%;
+    padding: 50px auto;
+    margin: auto;
 }
 
-#expand-project:checked ~ .portfolio-content {
-   display: flex;
-}
-#expand-project:checked ~ #portfolio-button {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-    
- /* Footer style rules*/
-
- footer {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    height: 6%;
-    width: 100%;
-    background-color: #4f6d7a;
 }
 
-footer i {
-    color: #c0d6df;
-    margin: 0 1rem 0 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+@media only screen and (max-width: 900px) {
 
-footer i:hover{
-color: #ffffff;
-}
-
-/* Media Queries */
-
-@media only screen and (max-width: 450px) {
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1rem;
-    }
-    h3 {
-        font-size: 0.75rem
-    }
-    p, ul, table {
-        font-size: 0.5rem;
-    }
-
-    .menu ul {
-        font-size: 1rem;
-    }
-
- header h1 {
-    margin-top: 3%;
- } 
-
- header h3 {
-     font-size: 0.6rem;
- }  
-
- .media-container, #avatar-container {
-    margin: 2% auto;
-}
-
-.contact-container {
-    width: 60%;
-    margin: 5% auto;
-}
-
-.portfolio-thumbnail img {
-    width: 75px;
-    height: 75px;
-}
-.portfolio-title h2{
-    font-size: 0.75rem;
-}
-
-.portfolio-title h3 {
-    font-size: 0.5rem;
-}
-
-.portfolio-button {
-    margin-bottom: 10%;
-}
-
-.page-title {
-    padding-top: 5%;
-}
-
-main {
-    padding-bottom: 15%;
-}
-}
-
-@media only screen and (max-width: 920px) {
-
-    #mobile-nav{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        position: relative;
-        height: auto;
-        width: auto;
-        margin: 4% 4%;
-        padding: 0;
-    }
-
-    #desktop-nav {
-        display: none;
-    }
-
-    #expand-button {
-        display: flex;
-    }
-}
-
-@media only screen and (max-width: 1060px) {
-    .resume-container h2 {
-       font-size: 1.5rem;
-    }
-    .resume-container h3 {
-        font-size: 0.6rem;
-    border-bottom: solid 0.1rem #4f6d7a;
-    }
-    .resume-container h4 {
-        margin: 1% 0 0 0;
-        font-size: 0.5rem;
-        }
-    .resume-container table {
-        font-size: 0.5rem;
-    }
-
-    .resume-container li {
-        font-size: 0.6rem;
-    }
-    .resume-container ul {
-        padding-left: 1rem;
-    }
-    .download-container h2 {
-        font-size: 1rem;
-    }
-    .download-container {
-        margin-bottom: 15%;
-    }
+   
 }

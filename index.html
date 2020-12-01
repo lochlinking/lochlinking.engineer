@@ -6,57 +6,324 @@
     <title>Lochlin King</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="siteInteractivity.js"></script>
 </head>
 
 <body>
 
 <header>
-    <a href="index.html"><h1>Lochlin King.</h1>
-    <h3> Mechanical Engineer, E.I.T. | Open to work</h3>
-    </a>
-    <nav id="desktop-nav">
-        <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        </ul>    
-    </nav>
-
-    <nav id="mobile-nav">
+    <nav>
         <input type="checkbox" id="expand-menu" /> 
         <div class="menu"> 
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#about-slide">About</a></li>
+                <li><a href="#resume-slide">Resume</a></li>
+                <li><a href="#portfolio-slide">Portfolio</a></li>
+                <li><a href="#contact-slide">Contact</a></li>
             </ul>
         </div>
-        <label for="expand-menu" id="expand-button"><i class="fa fa-bars"></i></label>
+        <label for="expand-menu" id="expand-button"><i class="fa fa-2x fa-bars"></i></label>
     </nav>
 </header>
 
 <main>
-    <div class="jumbotron">
-        <!-- Write something cool here -->
-        <!-- Place a video here at some point -->
+    <div id="jumbotron">
+        <div class="page-title">
+            <a href="index.html"><h1>Lochlin King.</h1>
+            <h3> Mechanical Engineer, E.I.T. | Open to work</h3>
+            </a>
+        </div>
     </div>
 
-    <div class="media-container">
-        <h2>Check out these projects!</h2>
+    <div id="about-slide">
+            <div id="about-content" class="content-column">
+                <h2>About</h2>
+                    <p> I desire to be an aeronautical design engineer. 
+                    The thought of designing parts and systems for spacecraft 
+                    fascinates me. Being on the shop floor with the machinists 
+                    who breathe life into the very parts I design inspires me. 
+                    Solving difficult problems with simplicity and elegance excites 
+                    me. I have a curious mind and an eagerness to continually learn. 
+                    My curiosity and eagerness have allowed me time and again to move 
+                    a project forward when faced with challenging obstacles. I am not 
+                    afraid of failure. I see it as an opportunity to expand my knowledge 
+                    and make corrections so that I do not make the same mistakes twice. I 
+                    see projects through from start to finish. I do so by striking a 
+                    balance between time, cost, and perfection. I make cost effective 
+                    design decisions that push the design as close to perfection as my 
+                    timeline permits. With these qualities, I will pursue a career 
+                    in aerospace and see to it that I have a hand in shaping the next 
+                    generation of space exploration.   
+                    </p>
+                <ul class="tab">
+                    <button id="button1" class="tablinks" onclick="openAbout(event, 'careerInterests', 1)">Career Interests</button> | 
+                    <button class="tablinks button2" onclick="openAbout(event, 'hobbies', 2)">Hobbies</button>
+                </ul>
+
+                <table id="careerInterests" class="tabcontentA aboutTable">
+                    <tr>
+                        <td>Machine design</td>
+                    </tr>
+                    <tr>
+                        <td>Design optimization</td>
+                    </tr>
+                    <tr>
+                        <td>Finite element analysis</td>
+                    </tr>
+                    <tr>
+                        <td>Controls and automation</td>
+                    </tr>
+                </table>
+
+                <table id="hobbies" class="tabcontentA aboutTable">
+                    <tr>
+                        <td>Rocketry</td>
+                    </tr>
+                    <tr>
+                        <td>Machining</td>
+                    </tr>
+                    <tr>
+                        <td>3D printing</td>
+                    </tr>
+                    <tr>
+                        <td>Metal fabrication</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="img-column">
+                <img src="media\images\LkingSunburstLakeCropped.jpg" alt="Lochlin in front of Sunburst Lake">
+            </div>    
+    </div>
+   
+    <div class="image-slide" style="background-image:url('media/images/SineBarDrawing.PNG');">
+        <div class="image-overlay">
+            <h2>"The important achievement of Apollo was demonstrating that humanity
+            is not forever chained to this planet and our visions go rather further 
+            than that and our opportunities are unlimited" -Neil Armstrong 
+            </h2>
+        </div>
     </div>
 
+    <div id="resume-slide">
+        <div class="gradient-overlay">
+            <div id="resume-intro">
+                <h2>Resume</h2>
+                <p> The lessons learned through my experiences have prepared me 
+                for a career in aerospace. Lessons in leadership, time management, 
+                and analysis techniques. This involved learning how to break down 
+                complex problems to first principles, procurement, sponsorships, 
+                and cost saving. I am legally permitted to work in Canada and am                    willing to relocate for any career opportunities.
+                </p>
+
+                <ul class="tab">
+                    <button id="button3" class="tablinksR" onclick="openResume(event, 'education', 3)">Education & Certifications</button> | 
+                    <button id="button4" class="tablinksR" onclick="openResume(event, 'skills', 4)">Technical Skills</button> | 
+                    <button id="button5" class="tablinksR" onclick="on()">Experience</button> |
+                    <a href="media/ResumeLochlinKing.pdf" download="ResumeLochlinKing" class="tablinksR">Pdf Download </a>
+                </ul>
+
+                <table id="education" class="tabcontentR aboutTable">
+                    <tr>
+                        <td>BSc. Mechanical Engineering | University of Alberta | Graduated April 2020 | 3.4 GPA</td>
+                    </tr>
+                    <tr> 
+                        <td>Registered E.I.T. with APEGA, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Certified SolidWorks Professional (CSWP), 2019</td>
+                    </tr>
+                    <tr>
+                        <td>NSERC Undegaduate Student Research Award, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>Junior Honors Design Award, 2018</td>
+                    </tr>
+                    <tr>
+                        <td>Key Electives: FEA for Mechanical Engineers, Applied CFD, Feedback Control Design</td>
+                    </tr>
+                </table>
+                <table id="skills" class="tabcontentR aboutTable">
+                    <tr>
+                        <td><strong>Analysis:</strong> ANSYS APDL, ANSYS Worbench, Matlab/Simulink, Siemens STAR-CCM+</td>
+                    </tr>
+                    <tr> 
+                        <td><strong>Design:</strong> DFMA, Fusion360, GD&T, SolidWorks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manufacturing:</strong> Manual mill, Manual lathe, TIG, GMAW, SMAW, 3D printing </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Programming:</strong> CSS, C++, HTML, Python</td>
+                    </tr>
+                </table>   
+            </div>
+            <div id="resumeOverlay" onclick="off()">
+                <div id="experience" class="tabcontentR resumecontent">
+                    <div class="exp-block">
+                        <h4><strong>Lead Student Engineer | Student Team for Alberta Rocketry Research | August 2018 - Present</strong></h4>
+                        <ul>
+                        <li>Led a 30-member team in the development of a solid fuel rocket for the IREC competition</li>
+                        <li>Assigned tasks, held weekly design meetings, met with sponsors, and procured materials</li>
+                        <li>Reduced airframe cost from $1000 to $200 through appropriate material selection and procurement</li>
+                        <li>Calculated external loads and performed analytical stress analysis on thrust plate and longerons</li>
+                        <li>Performed mesh convergence tests and validated finite element results with analytical calculations</li>
+                        <li>Presented at the 2018 and 2019 Aero-Day conferences on behalf of STARR</li>
+                        </ul>
+                    </div>
+                    <div class="exp-block">
+                        <h4><strong>Capstone Project | University of Alberta | January 2020 - April 2020</strong></h4>
+                        <ul>
+                        <li>Designed and developed a vertical takeoff and landing system (VTOL) for a fixed wing drone</li>
+                        <li>Generated and systematically refined, high quality, structured, heaxahedral meshes in ANSYS</li>
+                        <li>Removed stress singularities near boundary conditions using line loads instead of point loads</li>
+                        <li>Performed a topology optimization in ANSYS to reduce the VTOL structure mass by nearly 50%</li>
+                        <li>Optimized topology results for manufacturability with SolidWorks</li>
+                        <li>Performed verification simulation of optimized structure and validated results with analytical model</li>
+                        <li>Designed a 3D printed wind shroud, reducing drag by an estimated 25% compared to original design</li>
+                        <li>Sized and selected off the shelf components to streamline manufacture and assembly</li>
+                        <li>Designed VTOL structure to be waterjet from aluminum sheet and folded into shape, reducing fabrication time</li>
+                        <li>Successfully delivered the completed system on time and $2000 under the $10000 budget</li>
+                        </ul>
+                    </div>
+                    <div id="exp-bottom" class="exp-block">
+                        <h4><strong>Research Assistant | University of Alberta Laboratory of Turbulent Flow | April 2019 - September 2019</strong></h4>
+                        <ul>
+                        <li>Evaluated the aerodynamic performance of a client designed tunnel hull jet boat</li>
+                        <li>Created SolidWorks models with sheet metal and surface tools, optimized for 3D printing</li>
+                        <li>Specified limit-fit tolerances and produced engineering drawings for in-house machine shop</li>
+                        <li>Collaborated with machinists to fabricate and assemble experimental apparatus</li>
+                        <li>Executed wind tunnel measurements, used LabView for data acquisition, and processed data with MATLAB</li>
+                        <li>Prepared a technical report to convey test results and suggest improvements to the client</li>
+                        </ul>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="image-slide" style="background-image:url('media/images/ForgeFrontView.jpg');">
+        <div class="image-overlay">
+            <h2>"I have to be in the room where it happens" -Katherine Johnson</h2>
+        </div>
+    </div>
+
+    <div id="portfolio-slide">
+        <div id="portfolio-intro">
+            <h2>Portfolio</h2>
+            <p> What do you get when you combine engineering principles with
+            machine tools? The answer is an endless supply of projects, 
+            insaitible curiosity, and the desire to push the limits of what
+            is possible. 
+
+            </p>
+        </div>
+
+        <div class="row">
+            
+            <div class="portfolio-card" style="background-image: url('media/images/VTOLsystem.PNG');">
+                <a href="vtol.html" class="portfolio-overlay">
+                    <h3>VTOL System</h3>
+                    <h4>04/30/2020</h4>
+                </a>
+            </div>
+            
+
+            <div class="portfolio-card" style="background-image: url('media/images/FaceMillArbor.jpg');">                    
+                <div class="portfolio-overlay">
+                    <h3>Face Mill Arbor</h3>
+                    <h4>08/10/2020</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/JetBoatModel.jpg');">
+                <div class="portfolio-overlay">
+                    <h3>Jet Boat Aerodynamics</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/RingoI.PNG');">
+                <div class="portfolio-overlay">
+                    <h3>Sounding Rocket</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="portfolio-card" style="background-image: url('media/images/OutboardGear.jpg');">
+                <div class="portfolio-overlay">
+                    <h3>Outboard Starter Gear</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/ForgeFrontView.jpg');">                    
+                <a href="forge.html" class="portfolio-overlay">
+                    <h3>Propane Gas Forge</h3>
+                    <h4>08/10/2020</h4>
+                </a>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/TapFollower.jpg');">
+                <div class="portfolio-overlay">
+                    <h3>Tap Follower</h3>
+                    <h4>04/30/2020</h4>
+                </div> 
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/CrankShaftMesh.png');">
+                <div class="portfolio-overlay">
+                    <h3>Crankshaft</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="image-slide" style="background-image: url('media/images/DriveDog.jpg');">
+        <div class="image-overlay">
+            <h2>"Scientists study the world as it is, engineers create
+                the world that never has been" -Theodore Von Karman
+            </h2>
+        </div>
+    </div>
+
+    <div id="contact-slide">
+            <h2>Contact</h2>
+            
+            <div class="row">
+              
+                <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');" onclick="emailOn()">
+                    <div class="portfolio-overlay">
+                        <i id="emailIcon" class="fa fa-3x fa-envelope"></i>
+                        <h3 id="email">Email: lking@ualberta.ca</h3>  
+                    </div>
+                </div>
+                
+                <a href="https://www.linkedin.com/in/lochlin-king-a80a42163/" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                    <div class="portfolio-overlay">
+                        <i class="fa fa-3x fa-linkedin"></i>  
+                    </div>
+                </a>
+               
+                <a href="https://www.instagram.com/lochlinking.engineer/" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                    <div class="portfolio-overlay">
+                        <i class="fa fa-3x fa-instagram"></i>  
+                    </div>
+                </a>
+
+                <a href="https://github.com/lochlinking" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                    <div class="portfolio-overlay">
+                        <i class="fa fa-3x fa-github"></i>  
+                    </div>
+                </a>
+            </div>
+    </div>
+    
 </main>
-
-<footer>
-    <a href="https://www.instagram.com/lochlinking.engineer/"><i class="fa fa-instagram"></i></a>
-    <a href="https://github.com/lochlinking"><i class="fa fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/lochlin-king-a80a42163/"><i class="fa fa-linkedin"></i></a>
-    <a href="contact.html"><i class="fa fa-envelope"></i></a>
-    <a href="contact.html"><i class="fa fa-phone"></i></a>
-</footer>
 
 </body>
 </html>
-
