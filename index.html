@@ -11,18 +11,28 @@
 
 <body>
 
-<header>
-    <nav>
-        <input type="checkbox" id="expand-menu" /> 
-        <div class="menu"> 
-            <ul>
-                <li><a href="#about-slide">About</a></li>
-                <li><a href="#resume-slide">Resume</a></li>
-                <li><a href="#portfolio-slide">Portfolio</a></li>
-                <li><a href="#contact-slide">Contact</a></li>
-            </ul>
+<header id="navbar">
+    <button id="emailButton" onclick="openEmail()"><i class="fa fa-2x fa-envelope"></i></button>
+    <a href="https://www.linkedin.com/in/lochlin-king-a80a42163/"><i class="fa fa-2x fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/lochlinking.engineer/"><i class="fa fa-2x fa-instagram"></i></a>
+    <a href="https://github.com/lochlinking"><i class="fa fa-2x fa-github"></i></a>  
+    <button id="menuButton" onclick="openNav()"><i class="fa fa-2x fa-bars"></i></button>
+    <div id="emailOverlay">
+        <div id="exitEmail">
+            <i class="fa fa-2x fa-times" onclick="closeEmail()"></i>
         </div>
-        <label for="expand-menu" id="expand-button"><i class="fa fa-2x fa-bars"></i></label>
+        <h1>lking@ualberta.ca</h1>
+    </div>
+    <nav id="menu"> 
+        <div id="exitNav">
+        <i class="fa fa-2x fa-times" onclick="closeNav()"></i>
+        </div>
+        <ul>
+            <li><a href="#jumbotron" onclick="closeNav()">Home</a></li>
+            <li><a href="#about-slide" onclick="closeNav()">About</a></li>
+            <li><a href="#resume-slide" onclick="closeNav()">Resume</a></li>
+            <li><a href="#portfolio-slide" onclick="closeNav()">Portfolio</a></li>
+        </ul>
     </nav>
 </header>
 
@@ -291,39 +301,6 @@
         </div>
     </div>
 
-    <div id="contact-slide">
-            <h2>Contact</h2>
-            
-            <div class="row">
-              
-                <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');" onclick="emailOn()">
-                    <div class="portfolio-overlay">
-                        <i id="emailIcon" class="fa fa-3x fa-envelope"></i>
-                        <h3 id="email">Email: lking@ualberta.ca</h3>  
-                    </div>
-                </div>
-                
-                <a href="https://www.linkedin.com/in/lochlin-king-a80a42163/" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
-                    <div class="portfolio-overlay">
-                        <i class="fa fa-3x fa-linkedin"></i>  
-                    </div>
-                </a>
-               
-                <a href="https://www.instagram.com/lochlinking.engineer/" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
-                    <div class="portfolio-overlay">
-                        <i class="fa fa-3x fa-instagram"></i>  
-                    </div>
-                </a>
-
-                <a href="https://github.com/lochlinking" class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
-                    <div class="portfolio-overlay">
-                        <i class="fa fa-3x fa-github"></i>  
-                    </div>
-                </a>
-            </div>
-    </div>
-    
 </main>
-
 </body>
 </html>

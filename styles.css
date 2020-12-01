@@ -57,18 +57,35 @@ p, ul, table{
 header {
     display: flex;
     position: fixed;
+    top: 0;
     z-index: 1;
-    height: 12%;
+    height: 50px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    transition: top 0.5s;
 }
 
 header a {
-    padding: 0.5% 0% 0% 1%;
-    width: auto;
-    color: #c0d6df;
+    padding-top: 25px;
 }
 
+#menuButton {
+    padding-top: 27.5px;
+    outline: none;
+    background: inherit;
+    border: none;
+}
+
+#emailButton {
+    padding-top: 25px;
+    outline: none;
+    background: inherit;
+    border: none;  
+}
+header a:hover, header #menuButton:hover, #emailButton:hover{
+    color: #ffffff;
+    transition: 0.25s;
+}
 /* Main content container style rule*/
 
 main {
@@ -106,29 +123,24 @@ main {
 
 /* Navigation style rules */
 
-#expand-menu {
-    visibility: hidden;
-}
-.menu {
-    visibility: collapse;
-}
-
-.menu {
-    display: flex;
+#menu {
+    z-index: 1;
     position: fixed;
     top: 0;
     right: 0;
     padding: 0;
     margin: 0;
+    width: 0;
     height: 100%;
-    width: 20%;
-    color: #ffffff;
     background-color: rgba(0,0,0,0.8); 
     align-items: center;
     justify-content: space-around; 
+    overflow-x: hidden;
+    transition: 0.75s;
+    text-align: center;
 }
 
-.menu ul {
+#menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -136,17 +148,51 @@ main {
     font-size: 2rem;
 }
 
-#expand-button {
+#menu a {
+    color: #ffffff;
+    padding: 0 5px;
+    margin: 100px;
+}
+
+#menu a:hover {
+    border: solid 2px #ffffff;
+    border-radius: 4px;
+
+}
+
+#emailOverlay {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); 
+    align-items: center;
+    justify-content: center; 
+    overflow-x: hidden;
+    transition: 0.75s;
+}
+
+#emailOverlay h1 {
+    color: #ffffff;
+}
+
+#exitNav, #exitEmail {
+    display: none;
     position: fixed;
     top: 25px;
-    right: 30px;
-    color:#000000;
-}
-#expand-menu:checked ~ .menu {
-   visibility: visible;
-}
-#expand-menu:checked ~ #expand-button {
+    right: 25px;
+    text-align: center;
+    padding: 5px;
     color: #ffffff;
+}
+
+#exitNav:hover, #exitEmail:hover {
+    border: solid 2px #ffffff;
+    border-radius: 4px;
 }
 
 /* About page style rules */
@@ -201,6 +247,7 @@ main {
     outline: none;
     color: #000000;
     opacity: 0.5;
+    transition: 0.25s;
   }
 
 .tab button:hover {

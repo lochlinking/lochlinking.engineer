@@ -1,3 +1,38 @@
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-75px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("menu").style.width = "100%";
+    document.getElementById("menu").style.display = "flex";
+    document.getElementById("exitNav").style.display = "flex";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("menu").style.width = "0%";
+    document.getElementById("exitNav").style.display = "none";
+  }
+
+  function openEmail() {
+    document.getElementById("emailOverlay").style.width = "100%";
+    document.getElementById("emailOverlay").style.display = "flex";
+    document.getElementById("exitEmail").style.display = "flex";
+  }
+
+  function closeEmail() {
+    document.getElementById("emailOverlay").style.width = "0%";
+    document.getElementById("exitEmail").style.display = "none";
+  }
 
 function openAbout(evt, interests, buttonIndex) {
     // Declare all variables
@@ -61,9 +96,4 @@ function openAbout(evt, interests, buttonIndex) {
   function off() {
     document.getElementById("resumeOverlay").style.display = "none";
     document.getElementById("resumecontent").style.display = "flex";
-  }
-
-  function emailOn() {
-    document.getElementById("emailIcon").style.display = "none";
-    document.getElementById("email").style.display = "flex";
   }
