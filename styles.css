@@ -459,6 +459,10 @@ main {
 
     /* Universal Styles */
 
+#jumbotron {
+    background-attachment: scroll;
+}
+
 .menu {
     width: 100%;
 }
@@ -497,7 +501,8 @@ h4 {
 
 }
  .image-slide {
-     padding: 0;
+    background-attachment: scroll;
+    padding: 0;
  }
 
 .image-slide h2{
@@ -511,6 +516,10 @@ h4 {
 
 .image-overlay {
     padding: 25px;
+}
+
+#image1 {
+    background-position: left;
 }
 
 #resume-slide {
