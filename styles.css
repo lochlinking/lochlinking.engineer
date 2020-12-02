@@ -59,7 +59,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-    height: 50px;
+    height: 60px;
     width: 100%;
     justify-content: space-evenly;
     transition: top 0.5s;
@@ -502,20 +502,47 @@ main {
 }
 /* Media Queries */
 
+@media only screen and (max-width: 375px) {
+    #jumbotron h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    #jumbotron h3 {
+        font-size: 1rem
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+
+    #resume-slide {
+        padding-bottom: 60%;
+    }
+}
+
 @media only screen and (max-width: 450px) {
 
     /* Universal Styles */
 
 #jumbotron {
     background-attachment: scroll;
+    text-align: center;
 }
 
+#jumbotron h3 {
+    font-size: 1.1rem;
+}
 .menu {
     width: 100%;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.75rem;
 }
 
 h2 {
@@ -543,10 +570,11 @@ h4 {
     padding: 0;
 
 }
-.img-column img{
+.img-column img {
     border-radius: 0;
-
+    margin-left: 50%;
 }
+
  .image-slide {
     background-attachment: scroll;
     padding: 0;
@@ -572,6 +600,7 @@ h4 {
 #resume-slide {
     background-position: center;
 }
+
 #resume-intro {
     max-width: 100%;
     padding: 25px;
@@ -646,7 +675,126 @@ margin: 0;
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+  
+    #about-slide {
+        padding: 0;
+    }
+    #about-content {
+        max-width: 80%;
+        padding: 25px;
+    }
+    
+    .img-column {
+        margin: 0;
+        padding: 0;
+    
+    }
+    .img-column img {
+        border-radius: 0;
+        margin-left: 50%;
+    }
+    
+     .image-slide {
+        background-attachment: scroll;
+        padding: 0;
+     }
+    
+    .image-slide h2{
+        padding: 25px;
+    }
+    
+    .image-slide h2 {
+        font-size: 1.25rem;
+        max-width: 100%;
+    }
+    
+    .image-overlay {
+        padding: 25px;
+    }
+    
+    #image1 {
+        background-position: left;
+    }
+    
+    #resume-slide {
+        background-position: center;
+    }
+    
+    #resume-intro {
+        max-width: 100%;
+        padding: 25px;
+    }
+    
+    #resume-intro p {
+        width: 90%;
+        margin: 0;
+    }
+    
+    .resumecontent {
+        height: 100%;
+        overflow: scroll;
+        padding: 25px 25px 100px 25px;
+        margin: 0;
+    }
+    
+    .resumecontent ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .exp-block {
+    padding-bottom: 25px;
+    }
+    .exp-block h4 {
+        padding-bottom: 25px;
+    }
+    
+    #exp-bottom {
+        padding-bottom: 50px;
+    }
+    
+    .row {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .portfolio-card {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .portfolio-card h3 {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
 
-   
+    .portfolio-card h4 {
+        padding-left: 20px;
+    }
+    #portfolio-intro {
+        padding: 25px;
+    }
+    
+    #portfolio-intro p {
+        max-width: 75%;
+    }
+    
+    #portfolio-slide {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #contact-slide h2 {
+        display: none;
+    }
+    
+    .portfolio-content {
+        max-width: 80%;
+        padding: 50px auto;
+        margin: auto;
+    }
+    
+
 }
