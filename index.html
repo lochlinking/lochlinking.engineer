@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link href="styles.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="siteInteractivity.js"></script>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/rocket_1f680.png" type="image/x-icon">
 </head>
 
 <body>
@@ -46,6 +47,7 @@
     </div>
 
     <div id="about-slide">
+        <div class="gradient-overlay">
             <div id="about-content" class="content-column">
                 <h2>About</h2>
                     <p> I desire to be an aeronautical design engineer. 
@@ -103,6 +105,7 @@
            <!--  <div class="img-column">
                 <img src="media\images\LkingSunburstLakeCropped.jpg" alt="Lochlin in front of Sunburst Lake">
             </div>  -->   
+        </div>
     </div>
    
     <div id="image1" class="image-slide" style="background-image:url('media/images/SineBarDrawing.PNG');">
@@ -122,7 +125,7 @@
                 for a career in aerospace. Lessons in leadership, time management, 
                 and analysis techniques. This involved learning how to break down 
                 complex problems to first principles, procurement, sponsorships, 
-                and cost saving. I am legally permitted to work in Canada and am 
+                and cost saving. I am legally permitted to work in Canada and 
                 willing to relocate for any career opportunities.
                 </p>
 
@@ -222,15 +225,23 @@
     <div id="portfolio-slide">
         <div id="portfolio-intro">
             <h2>Portfolio</h2>
-            <p> Below are a collection of projects I have had the pleasure
-            of working on. To me, projects are the best way to expand your
-            knowledge and learn new skills. There is something exciting about
-            applying the theories I've learned in school... Add more info here. 
+            <p> Below is a collection of projects I have had the pleasure of working on. 
+                Projects have provided a way for me to expand my knowledge and 
+                learn new skills, far beyond the lecture hall.
+                I like to work with my hands as much as I like to solve design problems. 
+                Projects allow me to exercise both interests. 
             </p>
         </div>
 
         <div class="row">
             
+            <div class="portfolio-card" style="background-image: url('media/images/WebsiteCode.PNG');">
+                <a href="website.html" class="portfolio-overlay">
+                    <h3>Personal Website</h3>
+                    <h4>12/1/2020</h4>
+                </a>
+            </div>
+
             <div class="portfolio-card" style="background-image: url('media/images/VTOLsystem.PNG');">
                 <a href="vtol.html" class="portfolio-overlay">
                     <h3>VTOL System</h3>
@@ -238,12 +249,11 @@
                 </a>
             </div>
             
-
-            <div class="portfolio-card" style="background-image: url('media/images/FaceMillArbor.jpg');">                    
-                <div class="portfolio-overlay">
-                    <h3>Face Mill Arbor</h3>
-                    <h4>08/10/2020</h4>
-                </div>
+            <div class="portfolio-card" style="background-image: url('media/images/RingoI.PNG');">
+                <a href="rocket.html" class="portfolio-overlay">
+                    <h3>Sounding Rocket</h3>
+                    <h4>03/25/2020</h4>
+                </a>
             </div>
 
             <div class="portfolio-card" style="background-image: url('media/images/JetBoatModel.jpg');">
@@ -253,27 +263,23 @@
                 </div>
             </div>
 
-            <div class="portfolio-card" style="background-image: url('media/images/RingoI.PNG');">
-                <div class="portfolio-overlay">
-                    <h3>Sounding Rocket</h3>
-                    <h4>04/30/2020</h4>
-                </div>
-            </div>
         </div>
             
+        
         <div class="row">
-            <div class="portfolio-card" style="background-image: url('media/images/OutboardGear.jpg');">
-                <div class="portfolio-overlay">
-                    <h3>Outboard Starter Gear</h3>
-                    <h4>04/30/2020</h4>
-                </div>
-            </div>
 
             <div class="portfolio-card" style="background-image: url('media/images/ForgeFrontView.jpg');">                    
                 <a href="forge.html" class="portfolio-overlay">
                     <h3>Propane Gas Forge</h3>
                     <h4>08/10/2020</h4>
                 </a>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/FaceMillArbor.jpg');">                    
+                <div class="portfolio-overlay">
+                    <h3>Face Mill Arbor</h3>
+                    <h4>08/10/2020</h4>
+                </div>
             </div>
 
             <div class="portfolio-card" style="background-image: url('media/images/TapFollower.jpg');">
@@ -283,14 +289,46 @@
                 </div> 
             </div>
 
-            <div class="portfolio-card" style="background-image: url('media/images/CrankShaftMesh.png');">
+            <div class="portfolio-card" style="background-image: url('media/images/OutboardGear.jpg');">
                 <div class="portfolio-overlay">
-                    <h3>Crankshaft</h3>
+                    <h3>Outboard Starter Gear</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                <div class="portfolio-overlay">
+                    <h3>Coming soon: Rocket load estimates code</h3>
+                    <h4>04/30/2020</h4>
+                </div>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">                    
+                <a href="forge.html" class="portfolio-overlay">
+                    <h3>Coming soon: Bulkhead topology optimization </h3>
+                    <h4>08/10/2020</h4>
+                </a>
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                <div class="portfolio-overlay">
+                    <h3>Coming soon: 3D printer enclosure</h3>
+                    <h4>04/30/2020</h4>
+                </div> 
+            </div>
+
+            <div class="portfolio-card" style="background-image: url('media/images/InstrumentsEdited.png');">
+                <div class="portfolio-overlay">
+                    <h3>Coming soon: fiber reinforced 3D printed nosecone</h3>
                     <h4>04/30/2020</h4>
                 </div>
                 
             </div>
         </div>
+        
     </div>
 
     <div class="image-slide" style="background-image: url('media/images/DriveDog.jpg');">

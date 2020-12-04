@@ -200,9 +200,11 @@ main {
 #about-slide {
     display: flex;
     width: 100%;
-    padding-bottom: 10%;
-    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
+   /*  padding-bottom: 10%; */
+    background-image: url("media/images/FinStructureEdited2.PNG");
+    background-size: cover;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 #about-list {
@@ -475,34 +477,31 @@ main {
     font-size: 1.5rem;
     padding-bottom: 25px;
 }
+
+.portfolio-image {
+    display: block;
+}
+
+.portfolio-image img {
+    height: 500px;
+    width: 500px;
+    border-radius: 2.5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 /* Contact slide style rules */
-
-#contact-slide {
-    display: flex;
-    background: radial-gradient( #ffffff, rgba(195,197,217,0.6));
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 47.5px;
-    height: 100%;
-   
-}
-
-#contact-slide i {
-    padding: 10px;
-    color: #ffffff;
-}
 
 #email {
     display: none;
 }
 
-#emailIcon{
+#emailIcon {
     display: block;
 }
+
 /* Media Queries */
 
 @media only screen and (max-width: 375px) {
+    
     #jumbotron h1 {
         font-size: 3rem;
         text-align: center;
@@ -559,6 +558,7 @@ h4 {
 
 #about-slide {
     padding: 0;
+    background-position: center;
 }
 #about-content {
     max-width: 100%;
@@ -668,10 +668,16 @@ margin: 0;
     margin: auto;
 }
 
+.portfolio-image img {
+    height: auto;
+    width: 100%;
+    border-radius: 2.5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
 #emailOverlay h1 {
     font-size: 2.25rem;
 }
-
 
 }
 
@@ -679,6 +685,7 @@ margin: 0;
   
     #about-slide {
         padding: 0;
+      /*   background-position: right; */
     }
     #about-content {
         max-width: 80%;
