@@ -22,8 +22,6 @@
             <img src="media\images\RingoI.PNG" alt="Screenshot of lochlin's website code">
         </div>
         <h2>Project Overview</h2>
-        <h3>Note: This article is incomplete. The article will be completed 
-        by 10:00 am Saturday</h3>
         <p> I developed this sounding rocket in collaboration with 
         a student team at the University of Alberta whose sole mission
         is to provide students with the opportunity to explore rocket engineering.
@@ -33,11 +31,10 @@
         </p>
     <ul>
         <li>Extracurricular student team project</li>
-        <li>Designed a rocket from the ground up</li>
-        <li>Became familiar with industry standard analysis techniques</li>
-        <li>Expanded my knowledge outside of my discipline</li>
-        <li>Used as a stepping stone in liquid fuel rocket development</li>
-        <li>Improved my machining skills and broadened my manufacturing knowledge</li>
+        <li>Design, build, test, and launch a solid-fuel 
+        rocket to reach an altitude of 3040 +/- 10 m </li>
+        <li>Built for the annual Intercollegiate Rocket Engineering Competition in Los Cruces, New Mexico</li>
+        <li>This project is the first step towards liquid fuel rocket development</li>
     </ul>
 
     <p>Our objective was to develop a solid fuel rocket to reach
@@ -45,23 +42,105 @@
     $5000 to build.</p> 
 
         <h2>Discussion</h2>
-        <p>The development of this rocket came with a learning curve 
-        steeper than anything I had previously encountered in my life.
-        Our team started from square one. Our first year was spent 
-        building the foundational knowledge needed to build a rocket
-        and learning the appropriate analysis techniques. One of the 
-        most difficult challenges for our team to overcome was the 
-        estimation of external loads. Once we understood the physics 
-        behind the rocket
-
+        <p>To successfully design a rocket capable of attaining an apogee of 3040 ± 10 m, 
+            is no easy feat. This was undoubtably a team effort. 
+            I will, to the best of my ability, describe how my team and I tackled this 
+            project and the role I played in bringing this project to completion. 
+            My discussion of the project will highlight the following key points:
+        </p>
         <ul>
-            <li>Loads estimation was the hardest part of rocket development</li>
-            <li>The recovery system was the most difficult system to develop</li>
-            <li>Open source software has made trajectory prediction much simpler</li>
-            <li>CNC machining is expensive for one off parts and can be avoided with appropriate design decisions</li>
+            <li>How we divided the project into sub problems</li>
+            <li>What these sub problems were</li>
+            <li>The solutions our team developed to answer each sub problem</li>
+            <li>The lessons I learned during this project</li>
         </ul>
         
+        <h3>Conceptual design</h3>
+        <p>
+            The key to a project of this scale is to divide it into smaller, more 
+            manageable sub problems. We must first describe what the solution looks
+            like before we can identify the sub problems in the solution process. 
+            This is very similar to the way differential equations are solved in 
+            mathematics. We begin by understanding the general form of the solution 
+            and then work backwards to determine the steps required to arrive at our 
+            final solution. Now for a rocket, this means estimating the vehicle’s 
+            geometry, the approximate mass of each subsystem, their respective 
+            locations inside the rocket, and the expectations of the planned mission. 
+            Three concept designs were developed, based on the collective flight 
+            experience of the rocketry community, rules of thumb, and open source 
+            software. The best concept was then chosen based on a decision matrix 
+            that ranked each design on the following factors: mass, cost, and 
+            complexity.
         </p>
+
+        <p>With the general solution now known, our team then divided the subsystems 
+            of the rocket into sub problems. The most notable sub problems our team 
+            encountered during the detailed design phase of the project were as 
+            follows:
+        </p>
+
+        <ul>
+            <li>The trajectory problem: Accurate flight path and conditions estimation</li>
+            <li>The loads estimation problem: Accurate axial, shear, and moment force
+                 estimation</li>
+            <li>The optimization problem: how do we design the perfect rocket for 
+                our flight conditions?</li>
+        </ul>
+
+        <h3>The trajectory problem</h3>
+
+        <p>The ability to predict the trajectory of the rocket with accuracy and 
+            precision, is critical to mission success. Without reliable trajectory
+            data, our team could not safely design the rocket’s structure or guarantee
+            that our rocket would deliver the payload to its required altitude. To 
+            fully convey the magnitude of this problem, I will first provide some 
+            background information on trajectory prediction and then describe how our 
+            team was able to overcome this challenge.
+        </p>
+
+        <p>With this understood, our next step was to figure out how implement this 
+            into a simulation. I studied the physics behind this problem until I had
+            gathered enough information to at least comprehend the solution procedure
+            required for such a simulation. The solution procedure for a 6 degree 
+            of freedom trajectory simulation is as follows:
+        </p>
+
+        <ol>
+            <li>Initialize the rocket in a known position and orientation in time t = 0</li>
+            <li>Compute the local wind velocity and other atmospheric conditions</li>
+            <li>Compute the aerodynamic forces and moments affecting the rocket </li>
+            <li>Compute the effects of the motor thrust and gravity on the rocket</li>
+            <li>Compute the mass and moments of inertia of the rocket and from these 
+            the linear and angular accelerations of the rocket</li>
+            <li>Numerically integrate the acceleration equations to obtain
+            velocities, positions, and orientations during time step Δt</li>
+            <li>Update current time to t = t + Δt</li>
+            <li>Repeat steps 1-7 until the entire trajectory has been plotted 
+            (read: the rocket has landed) </li>
+        </ol>
+
+        <p>Although we understood the simulation procedure, our team was ill-equipped
+        at the time to implement such a thing into a full software package. 
+        Thankfully, we live in an age where open source software is in abundance. 
+        In 2009 Sampo Niskanen, an MSc. candidate attending Helsinki University of 
+        Technology, completed his MSc. thesis titled “Development of an Open Source 
+        model rocket simulation software”. What his work translated to, was a complete
+        software package wherein a rocket could be designed, and its trajectory 
+        simulated, accounting for the aforementioned factors. The software Niskanen 
+        developed was aptly named OpenRocket and was immediately implemented into our 
+        design cycle. Upon discovery of this open source software, we studied 
+        Niskanen’s thesis which doubled as documentation describing how the software
+        functioned. Once we completely understood the assumptions and limitations of
+        the software, our team was finally able to compute the necessary parameters
+        for further design work involving loads estimation and design optimization. 
+        </p>
+
+        <h3>The load estimation problem</h3>
+
+        <p>Coming soon!</p>
+
+
+
         <h2>Lessons learned</h2>
         <p>I figured out how to determine the structural loads on a
         rocket. How to predict the static stability of a rocket. I 
