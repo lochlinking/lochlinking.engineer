@@ -89,8 +89,8 @@ function openAbout(evt, interests, buttonIndex) {
 
 
   function on() {
-    document.getElementById("resumeOverlay").style.display = "flex";
-    document.getElementById("experience").style.display = "flex";
+    document.getElementById("resumeOverlay").style.display = "block";
+    document.getElementById("experience").style.display = "block";
   }
   
   function off() {

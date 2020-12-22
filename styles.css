@@ -48,7 +48,7 @@ h3 {
 font-size: 2rem;
 }
 
-p, ul, table{
+p, ul, table {
     font-size: 1rem;
 }
 
@@ -110,6 +110,13 @@ main {
     padding-bottom: 2.5%;
 }
 
+#jumbotron h1 {
+    text-align: center;
+}
+
+#jumbotron h3 {
+    text-align: center;
+}
 /* Page title header */
 
 .page-title {
@@ -375,7 +382,7 @@ main {
     background: radial-gradient(#ffffff, rgba(195,197,217,0.9)); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */   
-    flex-wrap: wrap; 
+    text-align: center;
 }
 
 #education {
@@ -390,6 +397,7 @@ main {
     display: none;
     margin: 0;
 }
+
 /* Portfolio slide style rules */
 
 #portfolio-slide {
